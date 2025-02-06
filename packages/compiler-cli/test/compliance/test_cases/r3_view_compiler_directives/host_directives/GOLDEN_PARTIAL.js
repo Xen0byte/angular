@@ -3,35 +3,33 @@
  ****************************************************************************************************/
 import { Component, Directive } from '@angular/core';
 import * as i0 from "@angular/core";
-class DirectiveA {
+export class DirectiveA {
 }
 DirectiveA.ɵfac = i0.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "0.0.0-PLACEHOLDER", ngImport: i0, type: DirectiveA, deps: [], target: i0.ɵɵFactoryTarget.Directive });
 DirectiveA.ɵdir = i0.ɵɵngDeclareDirective({ minVersion: "14.0.0", version: "0.0.0-PLACEHOLDER", type: DirectiveA, isStandalone: true, host: { classAttribute: "dir-a" }, ngImport: i0 });
-export { DirectiveA };
 i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "0.0.0-PLACEHOLDER", ngImport: i0, type: DirectiveA, decorators: [{
             type: Directive,
-            args: [{ standalone: true, host: { 'class': 'dir-a' } }]
+            args: [{ host: { 'class': 'dir-a' } }]
         }] });
-class DirectiveB {
+export class DirectiveB {
 }
 DirectiveB.ɵfac = i0.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "0.0.0-PLACEHOLDER", ngImport: i0, type: DirectiveB, deps: [], target: i0.ɵɵFactoryTarget.Directive });
 DirectiveB.ɵdir = i0.ɵɵngDeclareDirective({ minVersion: "14.0.0", version: "0.0.0-PLACEHOLDER", type: DirectiveB, isStandalone: true, host: { classAttribute: "dir-b" }, ngImport: i0 });
-export { DirectiveB };
 i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "0.0.0-PLACEHOLDER", ngImport: i0, type: DirectiveB, decorators: [{
             type: Directive,
-            args: [{ standalone: true, host: { 'class': 'dir-b' } }]
+            args: [{ host: { 'class': 'dir-b' } }]
         }] });
-class MyComponent {
+export class MyComponent {
 }
 MyComponent.ɵfac = i0.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "0.0.0-PLACEHOLDER", ngImport: i0, type: MyComponent, deps: [], target: i0.ɵɵFactoryTarget.Component });
-MyComponent.ɵcmp = i0.ɵɵngDeclareComponent({ minVersion: "14.0.0", version: "0.0.0-PLACEHOLDER", type: MyComponent, selector: "my-component", hostDirectives: [{ directive: DirectiveA }, { directive: DirectiveB }], ngImport: i0, template: '', isInline: true });
-export { MyComponent };
+MyComponent.ɵcmp = i0.ɵɵngDeclareComponent({ minVersion: "14.0.0", version: "0.0.0-PLACEHOLDER", type: MyComponent, isStandalone: false, selector: "my-component", hostDirectives: [{ directive: DirectiveA }, { directive: DirectiveB }], ngImport: i0, template: '', isInline: true });
 i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "0.0.0-PLACEHOLDER", ngImport: i0, type: MyComponent, decorators: [{
             type: Component,
             args: [{
                     selector: 'my-component',
                     template: '',
                     hostDirectives: [DirectiveA, DirectiveB],
+                    standalone: false
                 }]
         }] });
 
@@ -57,50 +55,45 @@ export declare class MyComponent {
  ****************************************************************************************************/
 import { Component, Directive } from '@angular/core';
 import * as i0 from "@angular/core";
-class DirectiveA {
+export class DirectiveA {
 }
 DirectiveA.ɵfac = i0.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "0.0.0-PLACEHOLDER", ngImport: i0, type: DirectiveA, deps: [], target: i0.ɵɵFactoryTarget.Directive });
 DirectiveA.ɵdir = i0.ɵɵngDeclareDirective({ minVersion: "14.0.0", version: "0.0.0-PLACEHOLDER", type: DirectiveA, isStandalone: true, ngImport: i0 });
-export { DirectiveA };
 i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "0.0.0-PLACEHOLDER", ngImport: i0, type: DirectiveA, decorators: [{
             type: Directive,
-            args: [{ standalone: true }]
+            args: [{}]
         }] });
-class DirectiveB {
+export class DirectiveB {
 }
 DirectiveB.ɵfac = i0.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "0.0.0-PLACEHOLDER", ngImport: i0, type: DirectiveB, deps: [], target: i0.ɵɵFactoryTarget.Directive });
 DirectiveB.ɵdir = i0.ɵɵngDeclareDirective({ minVersion: "14.0.0", version: "0.0.0-PLACEHOLDER", type: DirectiveB, isStandalone: true, hostDirectives: [{ directive: DirectiveA }], ngImport: i0 });
-export { DirectiveB };
 i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "0.0.0-PLACEHOLDER", ngImport: i0, type: DirectiveB, decorators: [{
             type: Directive,
             args: [{
-                    standalone: true,
                     hostDirectives: [DirectiveA],
                 }]
         }] });
-class DirectiveC {
+export class DirectiveC {
 }
 DirectiveC.ɵfac = i0.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "0.0.0-PLACEHOLDER", ngImport: i0, type: DirectiveC, deps: [], target: i0.ɵɵFactoryTarget.Directive });
 DirectiveC.ɵdir = i0.ɵɵngDeclareDirective({ minVersion: "14.0.0", version: "0.0.0-PLACEHOLDER", type: DirectiveC, isStandalone: true, hostDirectives: [{ directive: DirectiveB }], ngImport: i0 });
-export { DirectiveC };
 i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "0.0.0-PLACEHOLDER", ngImport: i0, type: DirectiveC, decorators: [{
             type: Directive,
             args: [{
-                    standalone: true,
                     hostDirectives: [DirectiveB],
                 }]
         }] });
-class MyComponent {
+export class MyComponent {
 }
 MyComponent.ɵfac = i0.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "0.0.0-PLACEHOLDER", ngImport: i0, type: MyComponent, deps: [], target: i0.ɵɵFactoryTarget.Component });
-MyComponent.ɵcmp = i0.ɵɵngDeclareComponent({ minVersion: "14.0.0", version: "0.0.0-PLACEHOLDER", type: MyComponent, selector: "my-component", hostDirectives: [{ directive: DirectiveC }], ngImport: i0, template: '', isInline: true });
-export { MyComponent };
+MyComponent.ɵcmp = i0.ɵɵngDeclareComponent({ minVersion: "14.0.0", version: "0.0.0-PLACEHOLDER", type: MyComponent, isStandalone: false, selector: "my-component", hostDirectives: [{ directive: DirectiveC }], ngImport: i0, template: '', isInline: true });
 i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "0.0.0-PLACEHOLDER", ngImport: i0, type: MyComponent, decorators: [{
             type: Component,
             args: [{
                     selector: 'my-component',
                     template: '',
                     hostDirectives: [DirectiveC],
+                    standalone: false
                 }]
         }] });
 
@@ -130,39 +123,36 @@ export declare class MyComponent {
  ****************************************************************************************************/
 import { Component, Directive, forwardRef, Input } from '@angular/core';
 import * as i0 from "@angular/core";
-class MyComponent {
+export class MyComponent {
 }
 MyComponent.ɵfac = i0.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "0.0.0-PLACEHOLDER", ngImport: i0, type: MyComponent, deps: [], target: i0.ɵɵFactoryTarget.Component });
-MyComponent.ɵcmp = i0.ɵɵngDeclareComponent({ minVersion: "14.0.0", version: "0.0.0-PLACEHOLDER", type: MyComponent, selector: "my-component", hostDirectives: [{ directive: i0.forwardRef(function () { return DirectiveB; }) }], ngImport: i0, template: '', isInline: true });
-export { MyComponent };
+MyComponent.ɵcmp = i0.ɵɵngDeclareComponent({ minVersion: "14.0.0", version: "0.0.0-PLACEHOLDER", type: MyComponent, isStandalone: false, selector: "my-component", hostDirectives: [{ directive: i0.forwardRef(() => DirectiveB) }], ngImport: i0, template: '', isInline: true });
 i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "0.0.0-PLACEHOLDER", ngImport: i0, type: MyComponent, decorators: [{
             type: Component,
             args: [{
                     selector: 'my-component',
                     template: '',
                     hostDirectives: [forwardRef(() => DirectiveB)],
+                    standalone: false
                 }]
         }] });
-class DirectiveB {
+export class DirectiveB {
 }
 DirectiveB.ɵfac = i0.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "0.0.0-PLACEHOLDER", ngImport: i0, type: DirectiveB, deps: [], target: i0.ɵɵFactoryTarget.Directive });
-DirectiveB.ɵdir = i0.ɵɵngDeclareDirective({ minVersion: "14.0.0", version: "0.0.0-PLACEHOLDER", type: DirectiveB, isStandalone: true, hostDirectives: [{ directive: i0.forwardRef(function () { return DirectiveA; }), inputs: ["value", "value"] }], ngImport: i0 });
-export { DirectiveB };
+DirectiveB.ɵdir = i0.ɵɵngDeclareDirective({ minVersion: "14.0.0", version: "0.0.0-PLACEHOLDER", type: DirectiveB, isStandalone: true, hostDirectives: [{ directive: i0.forwardRef(() => DirectiveA), inputs: ["value", "value"] }], ngImport: i0 });
 i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "0.0.0-PLACEHOLDER", ngImport: i0, type: DirectiveB, decorators: [{
             type: Directive,
             args: [{
-                    standalone: true,
                     hostDirectives: [{ directive: forwardRef(() => DirectiveA), inputs: ['value'] }],
                 }]
         }] });
-class DirectiveA {
+export class DirectiveA {
 }
 DirectiveA.ɵfac = i0.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "0.0.0-PLACEHOLDER", ngImport: i0, type: DirectiveA, deps: [], target: i0.ɵɵFactoryTarget.Directive });
 DirectiveA.ɵdir = i0.ɵɵngDeclareDirective({ minVersion: "14.0.0", version: "0.0.0-PLACEHOLDER", type: DirectiveA, isStandalone: true, inputs: { value: "value" }, ngImport: i0 });
-export { DirectiveA };
 i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "0.0.0-PLACEHOLDER", ngImport: i0, type: DirectiveA, decorators: [{
             type: Directive,
-            args: [{ standalone: true }]
+            args: [{}]
         }], propDecorators: { value: [{
                 type: Input
             }] } });
@@ -182,7 +172,7 @@ export declare class DirectiveB {
 export declare class DirectiveA {
     value: any;
     static ɵfac: i0.ɵɵFactoryDeclaration<DirectiveA, never>;
-    static ɵdir: i0.ɵɵDirectiveDeclaration<DirectiveA, never, never, { "value": "value"; }, {}, never, never, true, never>;
+    static ɵdir: i0.ɵɵDirectiveDeclaration<DirectiveA, never, never, { "value": { "alias": "value"; "required": false; }; }, {}, never, never, true, never>;
 }
 
 /****************************************************************************************************
@@ -190,7 +180,7 @@ export declare class DirectiveA {
  ****************************************************************************************************/
 import { Component, Directive, EventEmitter, Input, Output } from '@angular/core';
 import * as i0 from "@angular/core";
-class HostDir {
+export class HostDir {
     constructor() {
         this.opened = new EventEmitter();
         this.closed = new EventEmitter();
@@ -198,10 +188,9 @@ class HostDir {
 }
 HostDir.ɵfac = i0.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "0.0.0-PLACEHOLDER", ngImport: i0, type: HostDir, deps: [], target: i0.ɵɵFactoryTarget.Directive });
 HostDir.ɵdir = i0.ɵɵngDeclareDirective({ minVersion: "14.0.0", version: "0.0.0-PLACEHOLDER", type: HostDir, isStandalone: true, inputs: { value: "value", color: "color" }, outputs: { opened: "opened", closed: "closed" }, ngImport: i0 });
-export { HostDir };
 i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "0.0.0-PLACEHOLDER", ngImport: i0, type: HostDir, decorators: [{
             type: Directive,
-            args: [{ standalone: true }]
+            args: [{}]
         }], propDecorators: { value: [{
                 type: Input
             }], color: [{
@@ -211,11 +200,10 @@ i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "0.0.0-PLACEHOLDE
             }], closed: [{
                 type: Output
             }] } });
-class MyComponent {
+export class MyComponent {
 }
 MyComponent.ɵfac = i0.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "0.0.0-PLACEHOLDER", ngImport: i0, type: MyComponent, deps: [], target: i0.ɵɵFactoryTarget.Component });
-MyComponent.ɵcmp = i0.ɵɵngDeclareComponent({ minVersion: "14.0.0", version: "0.0.0-PLACEHOLDER", type: MyComponent, selector: "my-component", hostDirectives: [{ directive: HostDir, inputs: ["value", "value", "color", "colorAlias"], outputs: ["opened", "opened", "closed", "closedAlias"] }], ngImport: i0, template: '', isInline: true });
-export { MyComponent };
+MyComponent.ɵcmp = i0.ɵɵngDeclareComponent({ minVersion: "14.0.0", version: "0.0.0-PLACEHOLDER", type: MyComponent, isStandalone: false, selector: "my-component", hostDirectives: [{ directive: HostDir, inputs: ["value", "value", "color", "colorAlias"], outputs: ["opened", "opened", "closed", "closedAlias"] }], ngImport: i0, template: '', isInline: true });
 i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "0.0.0-PLACEHOLDER", ngImport: i0, type: MyComponent, decorators: [{
             type: Component,
             args: [{
@@ -226,6 +214,7 @@ i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "0.0.0-PLACEHOLDE
                             inputs: ['value', 'color: colorAlias'],
                             outputs: ['opened', 'closed: closedAlias'],
                         }],
+                    standalone: false
                 }]
         }] });
 
@@ -237,10 +226,10 @@ import * as i0 from "@angular/core";
 export declare class HostDir {
     value: number;
     color: string;
-    opened: EventEmitter<unknown>;
-    closed: EventEmitter<unknown>;
+    opened: EventEmitter<any>;
+    closed: EventEmitter<any>;
     static ɵfac: i0.ɵɵFactoryDeclaration<HostDir, never>;
-    static ɵdir: i0.ɵɵDirectiveDeclaration<HostDir, never, never, { "value": "value"; "color": "color"; }, { "opened": "opened"; "closed": "closed"; }, never, never, true, never>;
+    static ɵdir: i0.ɵɵDirectiveDeclaration<HostDir, never, never, { "value": { "alias": "value"; "required": false; }; "color": { "alias": "color"; "required": false; }; }, { "opened": "opened"; "closed": "closed"; }, never, never, true, never>;
 }
 export declare class MyComponent {
     static ɵfac: i0.ɵɵFactoryDeclaration<MyComponent, never>;
@@ -252,7 +241,7 @@ export declare class MyComponent {
  ****************************************************************************************************/
 import { Component, Directive, EventEmitter, Input, Output } from '@angular/core';
 import * as i0 from "@angular/core";
-class HostDir {
+export class HostDir {
     constructor() {
         this.opened = new EventEmitter();
         this.closed = new EventEmitter();
@@ -260,10 +249,9 @@ class HostDir {
 }
 HostDir.ɵfac = i0.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "0.0.0-PLACEHOLDER", ngImport: i0, type: HostDir, deps: [], target: i0.ɵɵFactoryTarget.Directive });
 HostDir.ɵdir = i0.ɵɵngDeclareDirective({ minVersion: "14.0.0", version: "0.0.0-PLACEHOLDER", type: HostDir, isStandalone: true, inputs: { value: ["valueAlias", "value"], color: ["colorAlias", "color"] }, outputs: { opened: "openedAlias", closed: "closedAlias" }, ngImport: i0 });
-export { HostDir };
 i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "0.0.0-PLACEHOLDER", ngImport: i0, type: HostDir, decorators: [{
             type: Directive,
-            args: [{ standalone: true }]
+            args: [{}]
         }], propDecorators: { value: [{
                 type: Input,
                 args: ['valueAlias']
@@ -277,11 +265,10 @@ i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "0.0.0-PLACEHOLDE
                 type: Output,
                 args: ['closedAlias']
             }] } });
-class MyComponent {
+export class MyComponent {
 }
 MyComponent.ɵfac = i0.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "0.0.0-PLACEHOLDER", ngImport: i0, type: MyComponent, deps: [], target: i0.ɵɵFactoryTarget.Component });
-MyComponent.ɵcmp = i0.ɵɵngDeclareComponent({ minVersion: "14.0.0", version: "0.0.0-PLACEHOLDER", type: MyComponent, selector: "my-component", hostDirectives: [{ directive: HostDir, inputs: ["valueAlias", "valueAlias", "colorAlias", "customColorAlias"], outputs: ["openedAlias", "openedAlias", "closedAlias", "customClosedAlias"] }], ngImport: i0, template: '', isInline: true });
-export { MyComponent };
+MyComponent.ɵcmp = i0.ɵɵngDeclareComponent({ minVersion: "14.0.0", version: "0.0.0-PLACEHOLDER", type: MyComponent, isStandalone: false, selector: "my-component", hostDirectives: [{ directive: HostDir, inputs: ["valueAlias", "valueAlias", "colorAlias", "customColorAlias"], outputs: ["openedAlias", "openedAlias", "closedAlias", "customClosedAlias"] }], ngImport: i0, template: '', isInline: true });
 i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "0.0.0-PLACEHOLDER", ngImport: i0, type: MyComponent, decorators: [{
             type: Component,
             args: [{
@@ -292,6 +279,7 @@ i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "0.0.0-PLACEHOLDE
                             inputs: ['valueAlias', 'colorAlias: customColorAlias'],
                             outputs: ['openedAlias', 'closedAlias: customClosedAlias'],
                         }],
+                    standalone: false
                 }]
         }] });
 
@@ -303,10 +291,10 @@ import * as i0 from "@angular/core";
 export declare class HostDir {
     value: number;
     color: string;
-    opened: EventEmitter<unknown>;
-    closed: EventEmitter<unknown>;
+    opened: EventEmitter<any>;
+    closed: EventEmitter<any>;
     static ɵfac: i0.ɵɵFactoryDeclaration<HostDir, never>;
-    static ɵdir: i0.ɵɵDirectiveDeclaration<HostDir, never, never, { "value": "valueAlias"; "color": "colorAlias"; }, { "opened": "openedAlias"; "closed": "closedAlias"; }, never, never, true, never>;
+    static ɵdir: i0.ɵɵDirectiveDeclaration<HostDir, never, never, { "value": { "alias": "valueAlias"; "required": false; }; "color": { "alias": "colorAlias"; "required": false; }; }, { "opened": "openedAlias"; "closed": "closedAlias"; }, never, never, true, never>;
 }
 export declare class MyComponent {
     static ɵfac: i0.ɵɵFactoryDeclaration<MyComponent, never>;
