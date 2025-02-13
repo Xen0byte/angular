@@ -3,7 +3,7 @@
  ****************************************************************************************************/
 import { Component } from '@angular/core';
 import * as i0 from "@angular/core";
-class MyComponent {
+export class MyComponent {
     constructor() {
         this.one = '';
         this.two = '';
@@ -17,7 +17,7 @@ class MyComponent {
     }
 }
 MyComponent.ɵfac = i0.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "0.0.0-PLACEHOLDER", ngImport: i0, type: MyComponent, deps: [], target: i0.ɵɵFactoryTarget.Component });
-MyComponent.ɵcmp = i0.ɵɵngDeclareComponent({ minVersion: "14.0.0", version: "0.0.0-PLACEHOLDER", type: MyComponent, selector: "ng-component", ngImport: i0, template: `
+MyComponent.ɵcmp = i0.ɵɵngDeclareComponent({ minVersion: "14.0.0", version: "0.0.0-PLACEHOLDER", type: MyComponent, isStandalone: false, selector: "ng-component", ngImport: i0, template: `
     <div class="a{{one}}b{{two}}c{{three}}d{{four}}e{{five}}f{{six}}g{{seven}}h{{eight}}i{{nine}}j"></div>
     <div class="a{{one}}b{{two}}c{{three}}d{{four}}e{{five}}f{{six}}g{{seven}}h{{eight}}i"></div>
     <div class="a{{one}}b{{two}}c{{three}}d{{four}}e{{five}}f{{six}}g{{seven}}h"></div>
@@ -29,7 +29,6 @@ MyComponent.ɵcmp = i0.ɵɵngDeclareComponent({ minVersion: "14.0.0", version: "
     <div class="a{{one}}b"></div>
     <div class="{{one}}"></div>
   `, isInline: true });
-export { MyComponent };
 i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "0.0.0-PLACEHOLDER", ngImport: i0, type: MyComponent, decorators: [{
             type: Component,
             args: [{
@@ -44,7 +43,8 @@ i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "0.0.0-PLACEHOLDE
     <div class="a{{one}}b{{two}}c"></div>
     <div class="a{{one}}b"></div>
     <div class="{{one}}"></div>
-  `
+  `,
+                    standalone: false
                 }]
         }] });
 
@@ -71,7 +71,7 @@ export declare class MyComponent {
  ****************************************************************************************************/
 import { Component } from '@angular/core';
 import * as i0 from "@angular/core";
-class MyComponent {
+export class MyComponent {
     constructor() {
         this.one = '';
         this.two = '';
@@ -85,7 +85,7 @@ class MyComponent {
     }
 }
 MyComponent.ɵfac = i0.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "0.0.0-PLACEHOLDER", ngImport: i0, type: MyComponent, deps: [], target: i0.ɵɵFactoryTarget.Component });
-MyComponent.ɵcmp = i0.ɵɵngDeclareComponent({ minVersion: "14.0.0", version: "0.0.0-PLACEHOLDER", type: MyComponent, selector: "ng-component", ngImport: i0, template: `
+MyComponent.ɵcmp = i0.ɵɵngDeclareComponent({ minVersion: "14.0.0", version: "0.0.0-PLACEHOLDER", type: MyComponent, isStandalone: false, selector: "ng-component", ngImport: i0, template: `
     <div style.color="a{{one}}b{{two}}c{{three}}d{{four}}e{{five}}f{{six}}g{{seven}}h{{eight}}i{{nine}}j"></div>
     <div style.color="a{{one}}b{{two}}c{{three}}d{{four}}e{{five}}f{{six}}g{{seven}}h{{eight}}i"></div>
     <div style.color="a{{one}}b{{two}}c{{three}}d{{four}}e{{five}}f{{six}}g{{seven}}h"></div>
@@ -97,7 +97,6 @@ MyComponent.ɵcmp = i0.ɵɵngDeclareComponent({ minVersion: "14.0.0", version: "
     <div style.color="a{{one}}b"></div>
     <div style.color="{{one}}"></div>
   `, isInline: true });
-export { MyComponent };
 i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "0.0.0-PLACEHOLDER", ngImport: i0, type: MyComponent, decorators: [{
             type: Component,
             args: [{
@@ -112,7 +111,8 @@ i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "0.0.0-PLACEHOLDE
     <div style.color="a{{one}}b{{two}}c"></div>
     <div style.color="a{{one}}b"></div>
     <div style.color="{{one}}"></div>
-  `
+  `,
+                    standalone: false
                 }]
         }] });
 
@@ -139,23 +139,23 @@ export declare class MyComponent {
  ****************************************************************************************************/
 import { Component } from '@angular/core';
 import * as i0 from "@angular/core";
-class MyComponent {
+export class MyComponent {
     constructor() {
         this.one = '';
         this.two = '';
     }
 }
 MyComponent.ɵfac = i0.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "0.0.0-PLACEHOLDER", ngImport: i0, type: MyComponent, deps: [], target: i0.ɵɵFactoryTarget.Component });
-MyComponent.ɵcmp = i0.ɵɵngDeclareComponent({ minVersion: "14.0.0", version: "0.0.0-PLACEHOLDER", type: MyComponent, selector: "ng-component", ngImport: i0, template: `
+MyComponent.ɵcmp = i0.ɵɵngDeclareComponent({ minVersion: "14.0.0", version: "0.0.0-PLACEHOLDER", type: MyComponent, isStandalone: false, selector: "ng-component", ngImport: i0, template: `
     <div style.width.px="a{{one}}b{{two}}c"></div>
   `, isInline: true });
-export { MyComponent };
 i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "0.0.0-PLACEHOLDER", ngImport: i0, type: MyComponent, decorators: [{
             type: Component,
             args: [{
                     template: `
     <div style.width.px="a{{one}}b{{two}}c"></div>
-  `
+  `,
+                    standalone: false
                 }]
         }] });
 
@@ -175,7 +175,7 @@ export declare class MyComponent {
  ****************************************************************************************************/
 import { Component } from '@angular/core';
 import * as i0 from "@angular/core";
-class MyComponent {
+export class MyComponent {
     constructor() {
         this.myUrl1 = '...';
         this.myUrl2 = '...';
@@ -186,12 +186,11 @@ class MyComponent {
     }
 }
 MyComponent.ɵfac = i0.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "0.0.0-PLACEHOLDER", ngImport: i0, type: MyComponent, deps: [], target: i0.ɵɵFactoryTarget.Component });
-MyComponent.ɵcmp = i0.ɵɵngDeclareComponent({ minVersion: "14.0.0", version: "0.0.0-PLACEHOLDER", type: MyComponent, selector: "ng-component", ngImport: i0, template: `
+MyComponent.ɵcmp = i0.ɵɵngDeclareComponent({ minVersion: "14.0.0", version: "0.0.0-PLACEHOLDER", type: MyComponent, isStandalone: false, selector: "ng-component", ngImport: i0, template: `
     <div style.background="url({{ myUrl1 }})"
          style.borderImage="url({{ myUrl2 }}) {{ myRepeat }} auto"
          style.boxShadow="{{ myBoxX }} {{ myBoxY }} {{ myBoxWidth }} black"></div>
   `, isInline: true });
-export { MyComponent };
 i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "0.0.0-PLACEHOLDER", ngImport: i0, type: MyComponent, decorators: [{
             type: Component,
             args: [{
@@ -199,7 +198,8 @@ i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "0.0.0-PLACEHOLDE
     <div style.background="url({{ myUrl1 }})"
          style.borderImage="url({{ myUrl2 }}) {{ myRepeat }} auto"
          style.boxShadow="{{ myBoxX }} {{ myBoxY }} {{ myBoxWidth }} black"></div>
-  `
+  `,
+                    standalone: false
                 }]
         }] });
 
@@ -223,23 +223,23 @@ export declare class MyComponent {
  ****************************************************************************************************/
 import { Component } from '@angular/core';
 import * as i0 from "@angular/core";
-class MyComponent {
+export class MyComponent {
     constructor() {
         this.one = '';
         this.two = '';
     }
 }
 MyComponent.ɵfac = i0.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "0.0.0-PLACEHOLDER", ngImport: i0, type: MyComponent, deps: [], target: i0.ɵɵFactoryTarget.Component });
-MyComponent.ɵcmp = i0.ɵɵngDeclareComponent({ minVersion: "14.0.0", version: "0.0.0-PLACEHOLDER", type: MyComponent, selector: "ng-component", ngImport: i0, template: `
+MyComponent.ɵcmp = i0.ɵɵngDeclareComponent({ minVersion: "14.0.0", version: "0.0.0-PLACEHOLDER", type: MyComponent, isStandalone: false, selector: "ng-component", ngImport: i0, template: `
     <div style.width!important="a{{one}}b{{two}}c"></div>
   `, isInline: true });
-export { MyComponent };
 i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "0.0.0-PLACEHOLDER", ngImport: i0, type: MyComponent, decorators: [{
             type: Component,
             args: [{
                     template: `
     <div style.width!important="a{{one}}b{{two}}c"></div>
-  `
+  `,
+                    standalone: false
                 }]
         }] });
 

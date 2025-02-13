@@ -3,7 +3,7 @@
  * Copyright Google LLC All Rights Reserved.
  *
  * Use of this source code is governed by an MIT-style license that can be
- * found in the LICENSE file at https://angular.io/license
+ * found in the LICENSE file at https://angular.dev/license
  */
 
 import {ExtendedTemplateDiagnosticName} from '../../../../ngtsc/diagnostics';
@@ -17,7 +17,10 @@ import {ExtendedTemplateDiagnosticName} from '../../../../ngtsc/diagnostics';
  * @publicApi
  */
 export interface LegacyNgcOptions {
-  /** generate all possible generated files  */
+  /**
+   * generate all possible generated files
+   *  @deprecated This option is not used anymore.
+   */
   allowEmptyCodegenFiles?: boolean;
 
   /**
@@ -99,7 +102,6 @@ export interface StrictTemplateOptions {
    * Defaults to `false`, even if "fullTemplateTypeCheck" is `true`.
    */
   strictTemplates?: boolean;
-
 
   /**
    * Whether to check the type of a binding to a directive/component input against the type of the
@@ -259,6 +261,11 @@ export interface DiagnosticOptions {
      */
     checks?: {[Name in ExtendedTemplateDiagnosticName]?: DiagnosticCategoryLabel};
   };
+
+  /**
+   * If enabled, non-standalone declarations are prohibited and result in build errors.
+   */
+  strictStandalone?: boolean;
 }
 
 /**
@@ -281,14 +288,14 @@ export interface BazelAndG3Options {
    *
    * A consumer of such a path-mapped library will write an import like:
    *
-   * ```typescript
+   * ```ts
    * import {LibModule} from 'lib/deep/path/to/module';
    * ```
    *
    * The compiler will attempt to generate imports of directives/pipes from that same module
    * specifier (the compiler does not rewrite the user's given import path, unlike View Engine).
    *
-   * ```typescript
+   * ```ts
    * import {LibDir, LibCmp, LibPipe} from 'lib/deep/path/to/module';
    * ```
    *
@@ -314,6 +321,24 @@ export interface BazelAndG3Options {
    * Insert JSDoc type annotations needed by Closure Compiler
    */
   annotateForClosureCompiler?: boolean;
+
+  /**
+   * Specifies whether Angular compiler should rely on explicit imports
+   * via `@Component.deferredImports` field for `@defer` blocks and generate
+   * dynamic imports only for types from that list.
+   *
+   * This flag is needed to enable stricter behavior internally to make sure
+   * that local compilation with specific internal configuration can support
+   * `@defer` blocks.
+   */
+  onlyExplicitDeferDependencyImports?: boolean;
+
+  /**
+   * Generates extra imports in local compilation mode which imply the extra imports generated in
+   * full mode compilation (e.g., imports for statically resolved component dependencies). These
+   * extra imports are needed for bundling purposes in g3.
+   */
+  generateExtraImportsInLocalMode?: boolean;
 }
 
 /**
@@ -336,7 +361,6 @@ export interface I18nOptions {
    * Path to the extracted message file to emit when the xi18n operation is requested.
    */
   i18nOutFile?: string;
-
 
   /**
    * Locale of the application (used when xi18n is requested).
@@ -371,6 +395,14 @@ export interface I18nOptions {
    * The default is `false`, but this will be switched in a future major release.
    */
   i18nNormalizeLineEndingsInICUs?: boolean;
+
+  /**
+   * Whether or not to preserve whitespace when extracting messages with the legacy (View Engine)
+   * pipeline.
+   *
+   * Defaults to `true`.
+   */
+  i18nPreserveWhitespaceForLegacyExtraction?: boolean;
 }
 
 /**
@@ -383,10 +415,13 @@ export interface TargetOptions {
    * Specifies the compilation mode to use. The following modes are available:
    * - 'full': generates fully AOT compiled code using Ivy instructions.
    * - 'partial': generates code in a stable, but intermediate form suitable for publication to NPM.
+   * - 'experimental-local': generates code based on each individual source file without using its
+   * dependencies. This mode is suitable only for fast edit/refresh during development. It will be
+   * eventually replaced by the value `local` once the feature is ready to be public.
    *
    * The default value is 'full'.
    */
-  compilationMode?: 'full'|'partial';
+  compilationMode?: 'full' | 'partial' | 'experimental-local';
 }
 
 /**
@@ -405,4 +440,13 @@ export interface MiscOptions {
    * Disable TypeScript Version Check.
    */
   disableTypeScriptVersionCheck?: boolean;
+
+  /**
+   * Enables the runtime check to guard against rendering a component without first loading its
+   * NgModule.
+   *
+   * This check is only applied to the current compilation unit, i.e., a component imported from
+   * another library without option set will not issue error if rendered in orphan way.
+   */
+  forbidOrphanComponents?: boolean;
 }

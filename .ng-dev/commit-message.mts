@@ -29,12 +29,9 @@ export const commitMessage: CommitMessageConfig = {
     'platform-browser',
     'platform-browser-dynamic',
     'platform-server',
-    'platform-webworker',
-    'platform-webworker-dynamic',
     'router',
     'service-worker',
     'upgrade',
-    've',
     'zone.js',
   ],
 };

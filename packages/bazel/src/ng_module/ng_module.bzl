@@ -1,7 +1,7 @@
 # Copyright Google LLC All Rights Reserved.
 #
 # Use of this source code is governed by an MIT-style license that can be
-# found in the LICENSE file at https://angular.io/license
+# found in the LICENSE file at https://angular.dev/license
 """Run Angular's AOT template compiler
 """
 
@@ -202,13 +202,13 @@ def _ngc_tsconfig(ctx, files, srcs, **kwargs):
         "angularCompilerOptions": angular_compiler_options,
     })
 
-    # For prodmode, the compilation target is set to `ES2020`. `@bazel/typecript`
+    # For prodmode, the compilation target is set to `ES2022`. `@bazel/typecript`
     # using the `create_tsconfig` function sets `ES2015` by default for prodmode
-    # and uses ES5 with UMD for devmode. We want to consistenly use ES2020 ESM.
+    # and uses ES5 with UMD for devmode. We want to consistenly use ES2022 ESM.
     # https://github.com/bazelbuild/rules_nodejs/blob/901df3868e3ceda177d3ed181205e8456a5592ea/third_party/github.com/bazelbuild/rules_typescript/internal/common/tsconfig.bzl#L195
     # TODO(devversion): In the future, combine prodmode and devmode so we can get rid of the
     # ambiguous terminology and concept that can result in slow-down for development workflows.
-    tsconfig["compilerOptions"]["target"] = "es2020"
+    tsconfig["compilerOptions"]["target"] = "es2022"
     tsconfig["compilerOptions"]["module"] = "esnext"
 
     return tsconfig
